@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-Hang-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Comptible" content="IE=edge, chrome=1">
+    <title>農村地方美食小吃特色料理</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="fontawsome/css/all.min.css">
+    <link type="image/x-icon" href="images/favicon.ico" rel="icon">
+</head>
+
+<body>
+    <div id="loading">
+        <img src="images/loading.png" alt="loading">
+        <p class="loading__text">頁面載入中</p>
+    </div>
+    <div class="container">
+        <h1>農村地方美食小吃特色料理</h1>
+        <div class="content">
+            <div class="bar"> 
+                <div class="select">
+                    <select class="select__item" id="city" name="city" onchange="changeCity()" >
+                        <option selected disabled>請選擇縣市別</option>
+                    </select>
+                    <select class="select__item" id="town" name="town" onchange="changeTown()" >
+                        <option selected disabled>請選擇鄉鎮區</option>
+                    </select>
+                </div>  
+                <div class="show">
+                    檢視模式：
+                    <i class="icon fas fa-list" id="icon__list" onclick="clickList()"></i>
+                    <i class="icon fas fa-align-justify" id="icon__table" onclick="clickTable()"></i>
+                    <i class="icon fas fa-th-large" id="icon__card" onclick="clickCard()"></i>
+                </div>
+            </div>
+            <div class="store" id="store">
+                <ul class="card card-list" id="card">
+                </ul>
+            </div>
+            <div class="js-table-noshow table__scroll" id="table">
+                <table class="table" id="tablecontent">
+                    <tr>
+                        <th>編號</th>
+                        <th>行政區</th>
+                        <th>鄉鎮區</th>
+                        <th>商家</th>
+                        <th>地址</th>
+                    </tr>
+                    
+                </table>
+            </div> 
+            <div class="pagination">
+                <p class="pagination__total" id="pagetotal"></p>
+                <ul class="pagination__page" id="pagebutton">
+                </ul>
+            </div>
+        </div>
+        <div class="ad">
+            <div class="ad__pic">
+                <img src="images/adv1.png" alt="廣告1">
+            </div>
+            <div class="ad__pic">
+                <img src="images/adv2.png" alt="廣告2">
+            </div>
+            <div class="ad__pic" id="ad__position">
+                <img src="images/adv3.png" alt="廣告3">
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer__content">
+           <div class="footer__content__title">農村地方美食小吃特色料理</div> 
+           <div class="footer__content__text">資料來源:
+                <a href="https://data.gov.tw/dataset/6037">
+                    政府資料開放平台
+                </a>   
+            </div> 
+        </div>
+    </footer>
+    <script src="script/script.js"></script>
+</body>
+</html>

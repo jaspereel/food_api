@@ -1,0 +1,560 @@
+@charset"utf-8";
+body {
+    margin: 0;
+    background-color: #eee;
+    font-family: '微軟正黑體';
+}
+
+@media(max-width:414px){
+    .container {
+        width: auto;
+        margin: 8px;
+    }
+
+    .container h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .ad {
+        display: none;
+    }
+
+    .content .bar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:center;
+    }
+
+    .content .select{
+        width: 100%;
+        
+    }
+
+    .content .select__item {
+        width: 100%;
+        height: 30px;
+        margin-bottom: 10px;
+        border: none;
+        background-color: #d6d6d6;
+        font-family: '微軟正黑體';
+    }
+
+    .card {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+     /*商店資訊 List版*/
+    .card-list .card__content {
+        padding:10px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        background-color: #fff;
+    }
+
+    .card-list .content__text__title {
+        position: relative;
+        top:-30px;
+        font-size: 30px;
+        font-weight: 900;
+    }
+
+    .card-list .content__text__title a{
+        color: #0aa3d2;
+        text-decoration: none;
+    }
+
+    .card-list .content__location_city {
+        position: relative;
+        top: 60px;
+        width: 70px;
+        text-align:center;
+        color:#fff;
+        background-color: #0aa3d2;
+    }
+
+    .card-list .content__location_town {
+        position: relative;
+        top: 39px;
+        left: 75px;
+        width: 70px;
+        font-weight: 900;
+    }
+
+    .card-list .content__img {
+        width: 100%;
+        height: 205px;
+        overflow: hidden; 
+    }
+
+    .card-list .content__img__show {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    
+    }
+
+    .card-list .content__img__dark {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: relative;
+        bottom:208px;
+    }
+
+    .card-list .content__text__feature {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3; /* 限制文字只出現 3 行, 結尾出現省略號*/
+        line-height: 24px;
+    }
+    
+
+    .table{
+        margin-top: 15px;
+        width: auto;
+        border-collapse:collapse;
+        white-space: nowrap;
+    }
+    .table__scroll{
+        overflow-x:scroll
+    }
+
+    td{
+        border: 1px solid #9b9b9b;
+        
+    }
+    
+    th{
+        height:50px;
+        background-image: linear-gradient(180deg,#fff, #d2d2d2 );
+        border: 1px solid #9b9b9b;
+    }
+
+    .pagination {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .pagination__total {
+        display: none;
+    }
+
+    .pagination__page {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .footer {
+        margin-top: 10px;
+        width: 100%;
+        height: 80px;
+        background-color: #999;
+        text-align: center;
+    }
+
+    .footer__content {
+        padding-top: 10px;
+        color: #c5c5c5;
+    }
+
+    .footer__content__title {
+        font-size: 22px;
+        font-weight: 900;    
+    }
+    .footer__content__text a {
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+@media(min-width:415px){
+    .container {
+        width: 1200px;
+        margin: auto;
+    }
+
+    .container h1 {
+        text-align: center;
+    }
+
+    .content {
+        float: left;
+        width: 870px;
+    }
+
+    .content .bar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .content .select__item {
+        width: 150px;
+        height: 30px;
+        border: none;
+        background-color: #d6d6d6;
+        font-family: '微軟正黑體';
+    }
+    
+    .card {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /*商店資訊 List 版*/
+    .card-list .card__content {
+        display: flex;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        padding: 15px;
+        background-color: #fff;
+    }
+    
+    .card-list .content__location {
+        position: relative;
+        left: -130px;
+        top: -13px
+      ;
+    }
+    
+    .card-list .content__location_city {
+        position: absolute;
+        left: -180px;
+        width: 55px;
+        text-align:center;
+        color:#fff;
+        background-color: #0aa3d2;
+    }
+    
+    .card-list .content__location_town {
+        position: absolute;
+        left: -155px;
+        top: 25px;
+        width:15px;
+    }
+    .card-list .content__img {
+        width: 240px;
+        height: 160px;
+        overflow: hidden; 
+    }
+    
+    .card__content:hover img {
+        animation:img-scale 0.5s  ease forwards;
+    }
+
+    .card-list .content__img__dark {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: relative;
+        bottom:165px;
+    }
+    
+    .card-list .content__img__show {
+        width: 240px;
+        height: 160px;
+        position: relative;
+    
+    }
+    
+    .card-list .content__text {
+        margin-left: 20px;
+        width: 560px;
+    }
+
+    .card-list .content__text__title {
+        font-size: 30px;
+        font-weight: 900;
+    }
+
+    .card-list .content__text__title a{
+        color: #0aa3d2;
+        text-decoration: none;
+    }
+
+    .card-list .content__text__feature {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3; /* 限制文字只出現 3 行, 結尾出現省略號*/
+        line-height: 24px;
+    }
+
+    .table{
+        margin-top: 15px;
+        width: 100%;
+        border-collapse:collapse;  
+        border: 1px solid #9b9b9b;
+    }
+
+    td{
+        border: 1px solid #9b9b9b;
+        
+    }
+    
+    th{
+        height:50px;
+        background-image: linear-gradient(180deg,#fff, #d2d2d2 );
+        border: 1px solid #9b9b9b;
+    }
+
+    .footer {
+        clear: both;
+        width: 100%;
+        height: 80px;
+        background-color: #999;
+    }
+
+    .footer__content {
+        width: 1200px;
+        margin: auto;
+        padding-top: 10px;
+        color: #c5c5c5;
+    }
+
+    .footer__content__title {
+        margin-bottom: 5px;
+        font-size: 22px;
+        font-weight: 900;    
+    }
+
+    .footer__content__text a {
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+.loading__full {
+    position:absolute;
+    top:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.loading__text{
+    color:#fff;
+    font-weight: 900;
+}
+
+.icon{
+    margin-left: 5px;
+    font-size: 20px;
+    color:#666;  
+}
+.icon:hover{
+    cursor: pointer;
+}
+
+.js-icon-active i{
+    margin-left: 3px;
+    font-size: 20px;
+    color:#000;  
+}
+
+.card-card {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card-card .card__content {
+    position: relative;
+    margin-top: 15px ;
+    margin-bottom: 15px;
+    width: 420px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-card .content__img {
+    width: 430px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.card-card .content__img__show{
+    width: 100%;
+    height : 100%;
+}
+
+.card-card .content__img__dark{
+    position: relative;
+    bottom: 205px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card-card .content__location{
+    display: flex;
+    position: absolute;
+    top: 145px;
+    padding-left: 10px;
+}
+
+.card-card .content__location_city{
+    text-align:center;
+    color:#fff;
+    background-color: #0aa3d2;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.card-card .content__location_town{
+    margin-left: 5px;
+    font-style: italic;
+    color:#fff;
+}
+.card-card .content__text {
+    position: absolute;
+    top: 160px;
+    color: #fff;
+    padding: 10px;
+}
+
+.card-card .content__text__feature{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* 限制文字只出現 3 行, 結尾出現省略號*/
+}
+
+.card-card .card__content:hover .content__text{
+    transform: translateY(-60px);
+    color: #fff;
+    overflow: hidden;
+    transition: 0.3s ;
+}
+.card-card .card__content:hover .content__location{
+    transform: translateY(-60px);
+    color: #fff;
+    overflow: hidden;
+    transition: 0.3s ;
+}
+
+.card-card .card__content:hover .content__text__title:after {
+    content: '';
+    display: block;
+    position: relative;
+    top: 10px;
+    width: 100px;
+    height: 5px;
+    background-color: #fff;
+}
+
+.card-card .content__text__title {
+    font-weight: 900;
+    color:white
+}
+.card-card .content__text__title a {
+    color:white;
+    text-decoration: none;
+}
+
+.js-table-noshow{
+    display: none;
+}
+
+tr{
+    height: 50px;
+} 
+tr:nth-child(odd){
+    background:#f0f0f0;
+}
+tr:nth-child(even){
+    background:#fff;
+}
+tr:hover{
+    background:#d6edf3;
+}
+td{
+    padding: 8px;
+}
+td:nth-child(1){
+    width: 40px;
+    text-align: right;
+}
+td:nth-child(2){
+    width: 80px;
+}
+td:nth-child(3){
+    width: 80px;
+}
+td:nth-child(4){
+    width: 300px;
+}
+td:nth-child(5){
+    width: 700px;
+}
+
+.table a {
+    color: #0aa3d2;
+    text-decoration: none;
+}
+
+
+/*廣告區*/
+.ad {
+    float: right;
+    width: 300px;
+}
+.ad__pic {
+    margin-bottom: 15px;
+}
+
+.js-ad__fixed{
+    position: fixed;
+    top: 0;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pagination__page {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pagination__per {
+    display: inline-block;
+    width: 15px;
+    padding: 10px;
+    margin: 10px 5px;
+    text-align: center;
+    color: #fff;
+    background-color: #c5c5c5
+}
+.pagination__per-active{
+    background-color: #418499;
+    color: cyan;
+}
+.pagination__per a {
+    display: block;
+}
+
+@keyframes img-scale{
+    from{
+      transform:scale(1)
+    }
+    to{
+      transform: scale(1.3);
+    }
+}
